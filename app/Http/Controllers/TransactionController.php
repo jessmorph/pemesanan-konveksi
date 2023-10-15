@@ -324,7 +324,7 @@ class TransactionController extends Controller
         ->select('id', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl', 'xxxxl', 'totalBaju', 'gambar', 'keterangan')
         ->where('transaction_id', $id)
         ->get();
-      if ($dataBaju) {
+      if ($dataBaju && count($dataBaju) > 0) {
         $data = [
           'data' => $dataBaju
         ];
