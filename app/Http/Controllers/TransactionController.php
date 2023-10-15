@@ -82,13 +82,13 @@ class TransactionController extends Controller
   public function createPO(Request $request)
   {
     $transactionId = DB::table('transactions')->insertGetId([
-      'pemesan' => $request->pemesan,
+      'pemesan' => ucwords($request->pemesan),
       'noTelp' => $request->noTelp,
-      'provinsi' => $request->provinsi,
-      'kota' => $request->kota,
-      'alamat' => $request->alamat,
-      'sk' => $request->sk,
-      'ket_tambahan' => $request->keteranganTambahan,
+      'provinsi' =>ucwords($request->provinsi),
+      'kota' => ucwords($request->kota),
+      'alamat' => ucwords($request->alamat),
+      'sk' => ucwords($request->sk),
+      'ket_tambahan' => ucwords($request->keteranganTambahan),
       'persen_DP' => $request->persenDP,
       'total_DP' => $request->hargaPODP,
       'total_qty' => $request->totalPOQty,
@@ -192,13 +192,13 @@ class TransactionController extends Controller
         DB::table('transactions')
           ->where('id', $transactionId)
           ->update([
-            'pemesan' => $request->pemesan,
+            'pemesan' => ucwords($request->pemesan),
             'noTelp' => $request->noTelp,
-            'provinsi' => $request->provinsi,
-            'kota' => $request->kota,
-            'alamat' => $request->alamat,
-            'sk' => $request->sk,
-            'ket_tambahan' => $request->keteranganTambahan,
+            'provinsi' => ucwords($request->provinsi),
+            'kota' => ucwords($request->kota),
+            'alamat' => ucwords($request->alamat),
+            'sk' => ucwords($request->sk),
+            'ket_tambahan' => ucwords($request->keteranganTambahan),
             'persen_DP' => $request->persenDP,
             'total_DP' => $request->hargaPODP,
             'total_qty' => $request->totalPOQty,
@@ -247,10 +247,10 @@ class TransactionController extends Controller
           // insert semua baju
           if (!isset($baju->isDeleted)) {
             DB::table('baju')->insert([
-              'bahan' => $baju->bahan,
-              'warna' => $baju->warna,
-              'model' => $baju->model,
-              'name' => $baju->nama,
+              'bahan' => ucwords($baju->bahan),
+              'warna' => ucwords($baju->warna),
+              'model' => ucwords($baju->model),
+              'name' => ucwords($baju->nama),
               'xxs' => $baju->xxs,
               'xs' => $baju->xs,
               's' => $baju->s,
@@ -263,7 +263,7 @@ class TransactionController extends Controller
               'totalBaju' => $baju->totalQty,
               'hargaSatuan' => $baju->hargaSatuan,
               'gambar' => $file,
-              'keterangan' => $baju->keterangan,
+              'keterangan' => ucwords($baju->keterangan),
               'created_at' => date('Y-m-d H:i:s'),
               'updated_at' => date('Y-m-d H:i:s'),
               'transaction_id' => $transactionId
