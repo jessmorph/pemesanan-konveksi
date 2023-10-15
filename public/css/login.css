@@ -1,0 +1,18 @@
+.btnLogin{
+    cursor: pointer;
+    border: 2px solid transparent;
+    background-color: black;
+    color: white;
+    outline: 0;
+    font-size: 1rem;
+    font-family: 'Kanit', sans-serif;  
+    display: block;
+    
+}
+
+.btnLogin:hover{
+    border: 2px solid black;
+    background-color: #a9a9a9;
+    color: white;
+    text-decoration: none;
+}

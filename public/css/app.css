@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: linear-gradient(135deg, rgba(201,199,200,1) 0%, rgba(167,167,167,1) 25%, rgba(82,82,82,1) 75%);
+    height: 100vh;
+}
+
+.bgBox{
+    background-color: #a9a9a9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+
+
