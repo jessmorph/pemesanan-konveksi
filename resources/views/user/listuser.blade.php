@@ -20,7 +20,7 @@
                 @if (Auth::user()->role_id == 1)
                     <td>
                         <button class="btn-edit-user" id={{ $d->id }}>Edit</button>
-                        <button class="btn-delete-user" value="{{ $d->namaUser }}" id={{ $d->id }}>Delete</button>
+                        <button class="btn-delete-user bg-danger" value="{{ $d->namaUser }}" id={{ $d->id }}>Delete</button>
                     </td>
                 @endif
             </tr>
