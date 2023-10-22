@@ -115,10 +115,10 @@ class TransactionController extends Controller
             file_put_contents($file, $image_base64);
           }
           DB::table('baju')->insert([
-            'bahan' => $baju->bahan,
-            'warna' => $baju->warna,
-            'model' => $baju->model,
-            'name' => $baju->nama,
+            'bahan' => ucwords($baju->bahan),
+            'warna' => ucwords($baju->warna),
+            'model' => ucwords($baju->model),
+            'name' => ucwords($baju->nama),
             'xxs' => $baju->xxs,
             'xs' => $baju->xs,
             's' => $baju->s,
@@ -131,7 +131,7 @@ class TransactionController extends Controller
             'totalBaju' => $baju->totalQty,
             'hargaSatuan' => $baju->hargaSatuan,
             'gambar' => $file,
-            'keterangan' => $baju->keterangan,
+            'keterangan' => ucwords($baju->keterangan),
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
             'transaction_id' => $transactionId
