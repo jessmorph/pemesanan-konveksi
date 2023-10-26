@@ -23,6 +23,8 @@ $(document).ready(function () {
         $("#gambar").val("");
         $("#preview").hide();
         $("#preview-image").attr("src", "");
+        $("[name=gambar]").val("");
+        $("[name=gambarLama]").val("");
     }
 
     function resetForm() {

@@ -401,7 +401,9 @@ class TransactionController extends Controller
     if ($id) {
       $listBaju = DB::table('baju')->select('gambar')->where('transaction_id', '=', $id)->get();
       foreach ($listBaju as $baju) {
-        removeImage($baju->gambar);
+        if ($baju->gambar) {
+          removeImage($baju->gambar);
+        }
       };
       DB::table('baju')->where('transaction_id', $id)->delete();
       DB::table('transactions')

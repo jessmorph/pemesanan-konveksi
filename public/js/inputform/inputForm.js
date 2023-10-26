@@ -142,10 +142,10 @@ $(document).ready(function () {
 
                 html += "<tr>";
                 html += `<td>${index + 1}</td>`;
-                html += `<td>${bahan}</td>`;
-                html += `<td>${warna}</td>`;
-                html += `<td>${model}</td>`;
-                html += `<td>${nama}</td>`;
+                html += `<td style="text-transform: capitalize;">${bahan}</td>`;
+                html += `<td style="text-transform: capitalize;">${warna}</td>`;
+                html += `<td style="text-transform: capitalize;">${model}</td>`;
+                html += `<td style="text-transform: capitalize;">${nama}</td>`;
                 html += `<td>${parseToCurrency(hargaSatuan)}</td>`;
                 html += `<td>${totalQty}</td>`;
                 html += "</tr>";
@@ -165,7 +165,7 @@ $(document).ready(function () {
                 html += `<td>L: ${l}</td>`;
                 html += `<td>XXXL: ${xxxl}</td>`;
                 html += "<td rowspan='2'>";
-                html += `<textarea disabled class="p-2" name="keterangan" id="" cols="30" rows="2">${keterangan}</textarea>`;
+                html += `<textarea disabled class="p-2" name="keterangan" id="" cols="30" rows="2" style="text-transform: capitalize;">${keterangan}</textarea>`;
                 html += `</td>`;
                 html += `<td rowspan="2" colspan="2"> ${parseToCurrency(
                     totalQty * hargaSatuan
